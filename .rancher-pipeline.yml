@@ -19,3 +19,10 @@ stages:
   steps:
   - applyYamlConfig:
       path: ./deployment.yaml
+branch: {}
+notification:
+  recipients:
+  - recipient: '#rancher-pipeline'
+    notifier: c-swd7b:n-mmmmk
+  condition:
+  - Success

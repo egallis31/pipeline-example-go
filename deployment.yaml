@@ -34,29 +34,3 @@ spec:
         image: ${CICD_IMAGE}:${CICD_EXECUTION_SEQUENCE}
         ports:
         - containerPort: 80
-  ---
-apiVersion: extensions/v1beta1
-kind: Ingress
-metadata:
-  annotations:
-    field.cattle.io/creatorId: user-8p9cx
-    field.cattle.io/ingressState: '{"cGlwZWxpbmUtdGVzdC9wLTZ0NXBnLXBpcGVsaW5lL2hlbGxvLnIuZ2FsbGlzLmxvY2FsLy84MA==":"deployment:p-6t5pg-pipeline:example-helloserver"}'
-  creationTimestamp: "2019-04-09T21:07:30Z"
-  generation: 1
-  labels:
-    cattle.io/creator: norman
-  name: pipeline-test
-  namespace: p-6t5pg-pipeline
-  resourceVersion: "1834738"
-  selfLink: /apis/extensions/v1beta1/namespaces/p-6t5pg-pipeline/ingresses/pipeline-test
-  uid: 7cd83b0c-5b0b-11e9-a467-e839355df0a5
-spec:
-  rules:
-  - host: hello.r.gallis.local
-    http:
-      paths:
-      - backend:
-          serviceName: ingress-c11c20e04339a49268e34c1dc1d5f8b8
-          servicePort: 80
-status:
-  loadBalancer: {}
